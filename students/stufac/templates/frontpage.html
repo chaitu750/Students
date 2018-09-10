@@ -1,0 +1,37 @@
+
+<body style="background-image:url(/static/pattern-vector-dark.jpg);
+background-size:100%;"> <div style="color:yellow;<!-/stufac/static/pattern-vector-dark.jpg->
+background-color:rgb(255,255,255,0.05);border:solid white 0px;font-size:35px;font-family:arial;
+text-align:center;vertical-align:center;padding:0 0 0 0;margin:20% 0 15% 0%;">
+{%for student in student_top%}
+<p3>Top student is:&nbsp;"{{student.sname}}"</br>and scored maximum total marks:"{{student.sum}}"</p3>
+{%endfor%}
+
+{%for student in student_least%}
+<p5>Student who got least score is "{{student.sname}}" and scored total marks:"{{student.sum}}"</p5>
+{%endfor%}
+
+{%for student in maths_top%}
+<p7>Student scored highest in Mathematics is "{{student.sname}}" and scored: "{{student.marks}}" marks</p7>
+{%endfor%}
+
+{%for fac in fac_max_90%}
+<p9>Faculty those have max no of students who scored >90% is: "{{fac.faculty}}"
+in "{{sub_max_90.subject}}" subject and count is "{{sub_max_90.count}}"</p9>
+{%endfor%}
+
+{%for fac in fac_max_pass%}
+<p11>Faculty those have max no of students passed exam: "{{fac.faculty}}"
+in "{{sub_max_pass.subject}}" subject and count is "{{sub_max_pass.count}}"
+{%endfor%}</p11>
+
+{%for fac in fac_max_fail%}
+<p13>Faculty those have max no of students failed the exam: "{{fac.faculty}}"
+in "{{sub_max_fail.subject}}" subject and count is "{{sub_max_fail.count}}"</p13>
+{%endfor%}
+
+{%for k,v in sub_avg.items%}
+    <p15>Average marks in "{{k}}" is: "{{v}}%"</br></br></p15>
+{%endfor%}
+</div>
+</body>
